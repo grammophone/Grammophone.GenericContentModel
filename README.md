@@ -9,8 +9,13 @@ The collection interfaces offered are shown on the next UML diagram. All interfa
 
 ![Interface hierarchy of content models](https://raw.githubusercontent.com/grammophone/Grammophone.GenericContentModel/master/Images/GenericContentModel%20interfaces.png)
 
+### `ObservableHashSet<T>`
+
+`ObservableHashSet<T>` is a `HashSet<T>`-based collection that implements `INotifyCollectionChanged` and `INotifyPropertyChanged`.
+
+It is intended for models that need set semantics together with notification-based observers. One common use is entity collection navigation properties where notification-based change tracking is required, without referencing ORM-specific collection types from the domain model.
+
+Read more in the detailed [documentation](documentation/observable-hash-set.md).
+
 This library has no dependencies.
 
-## Documentation
-
-- [ObservableHashSet](documentation/observable-hash-set.md)
